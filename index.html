@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Tracker</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Time Tracker</a>
+    </nav>
+
+    <div class="container mt-5">
+        <!-- Timer Section -->
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="mb-4">Track Time</h3>
+                <form id="timer-form">
+                    <div class="form-group">
+                        <label for="task-name">Task Name</label>
+                        <input type="text" class="form-control" id="task-name" required>
+                    </div>
+                    <button type="button" id="start-timer" class="btn btn-success">Start Timer</button>
+                    <button type="button" id="stop-timer" class="btn btn-danger" disabled>Stop Timer</button>
+                </form>
+            </div>
+
+            <!-- Manual Log Section -->
+            <div class="col-md-6">
+                <h3 class="mb-4">Log Time Manually</h3>
+                <form id="manual-log-form">
+                    <div class="form-group">
+                        <label for="manual-task-name">Task Name</label>
+                        <input type="text" class="form-control" id="manual-task-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="manual-time-duration">Duration (minutes)</label>
+                        <input type="number" class="form-control" id="manual-time-duration" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="manual-category">Category</label>
+                        <select class="form-control" id="manual-category" required>
+                            <option value="work">Work</option>
+                            <option value="study">Study</option>
+                            <option value="leisure">Leisure</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Log</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Time Entries and Reports -->
+        <div class="mt-4">
+            <h3 class="mb-4">Time Entries</h3>
+            <ul class="list-group" id="time-entries-list"></ul>
+
+            <div id="time-reports" class="mt-4">
+                <!-- Time reports will be rendered here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-3 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">© 2024 Time Tracker. All rights reserved.</p>
+            <p class="mb-0">Developed by Mujeeb Ur Rehman</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap and jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/app.js"></script>
+</body>
+</html>
